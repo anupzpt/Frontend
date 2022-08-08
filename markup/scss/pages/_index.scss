@@ -1,0 +1,233 @@
+.banner-part {
+    padding: 65px 0;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+        color: $white;
+    }
+
+    &:before {
+        content: '';
+        height: 100vh;
+        display: block;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #bf3d42;
+        mix-blend-mode: darken;
+    }
+
+    .banner-content {
+        position: relative;
+        z-index: 99;
+        max-width: 978px;
+        color: #ffffff;
+        text-align: center;
+        /* letter-spacing: ; */
+    }
+}
+
+.about-part {
+    padding: 120px 0;
+
+    .image-wrap {
+        position: relative;
+        /* width: 500px;
+        height: 345px; */
+        padding-top: 66%;
+        border-radius: 24px;
+        overflow: hidden;
+    }
+
+    &.p {
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    .btn-wrap {
+        margin-top: 60px;
+    }
+}
+
+
+.products-part {
+    text-align: center;
+
+    .style:after{
+        top: -6px;
+    }
+
+    h2 {
+        line-height: 1;
+        margin-bottom: 17px;
+    }
+    
+    p {
+        margin: 0 0 15px;
+    }
+
+    .four-columns {
+        padding: 45px 0;
+    }
+
+    .button-wrap {
+        padding: 15px 0;
+    }
+
+    .btn{
+        text-transform: capitalize;
+
+        &.primary {
+            border-color: #b03d42;
+        }
+    }
+
+    .product-detail {
+        background-color: #121212;
+        border-radius: 23px;
+        overflow: hidden;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+
+        h3 {
+            margin-bottom: 20px;
+            color: $white;
+        }        
+    }
+
+    .col { 
+        .product-image {
+            height: 400px;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &:nth-child(2) .product-image {
+            height: 305px;
+        }
+
+        &:nth-child(3) .product-image {
+            height: 250px;
+        }
+
+        &:nth-child(4) .product-image {
+            height: 182px;
+        }
+    }
+
+    .product-code {
+        @include size(62px);
+        // width: 62px;
+        // height: 62px;
+        border-radius: 50%;
+        color: #fff;
+        background-color: #191919;
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+        border: 2px solid #b03d42;
+        line-height: 62px;
+        text-align: center;
+        margin: -30px auto 13px;
+        position: relative;
+        z-index: 99;
+    }
+
+    .product-content {
+        padding: 0 20px 30px;
+        font-size: 14px;
+        line-height: 1.57;
+    }
+}
+
+.process-part {
+    background: $dark-black;
+    text-align: center;
+    color: $white;
+    padding: 100px 0;
+
+    .container {
+        max-width: 1007px;
+    }
+
+    h2 {
+        color: $white;
+        margin-bottom: 30px;
+    }
+
+    .heading-wrap {
+        max-width: 940px;
+        margin: 0 auto 85px;
+    }
+
+    .icon-wrap {
+        border: 1px solid #f9f9fb;
+        height: 148px;
+        border-radius: 13px;
+        @include flex(wrap, center, center);
+        margin-bottom: 22px;
+    }
+
+    .process-text {
+        // display: inline-block;
+        // vertical-align: top;
+        font-size: 20px;
+        @include ver-align(top);
+    }
+
+    .four-columns {
+        margin: 0 -31px 75px;
+
+        .col {
+            padding: 0 32px;
+        }
+    }
+}
+
+.feedback-part {
+    text-align: center;
+    padding: 100px 0;
+
+    .feedback-img {
+        @include size(158px);
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 2px solid $red;
+        overflow: hidden;
+    
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    cite {
+        font-size: 19px;
+        line-height: 1.57;
+        text-transform: capitalize;
+        display: block;
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    q {
+        quotes: none;
+        display: inline-block;
+        vertical-align: top;
+    }
+}

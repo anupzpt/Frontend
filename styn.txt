@@ -1,0 +1,15 @@
+1) https://nodejs.org/download/release/v14.20.0/
+node.js version 20.0.0
+
+npm install -g gulp
+
+powershell - npm gulp
+
+
+install -----> 
+
+//Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+
+npm install
+
+npm i gulp-cli  /// npm i -g gulp-cli (globally)
