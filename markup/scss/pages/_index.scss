@@ -1,32 +1,32 @@
 .banner-part {
-    padding: 65px 0;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
 
+        .banner-slider{
+            padding: 65px 0;
+            position: relative;
+            display: flex;
+            // flex-wrap: wrap;
+            // align-items: center;
+            // justify-content: center;
+
+            &:before {
+                content: '';
+                height: 100vh;
+                display: block;
+            }
+        
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                background-color: #bf3d42;
+                mix-blend-mode: darken;
+            }
+        }
     h1 {
         color: $white;
-    }
-
-    &:before {
-        content: '';
-        height: 100vh;
-        display: block;
-    }
-
-    &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background-color: #bf3d42;
-        mix-blend-mode: darken;
     }
 
     .banner-content {
@@ -229,5 +229,34 @@
         quotes: none;
         display: inline-block;
         vertical-align: top;
+    }
+    .slick-arrow{
+        font-size: 52px;
+        color: $red;
+        line-height: 1;
+        background: none;
+        z-index: 9;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        &.slick-next{
+            right: 0;
+        }
+        &.slick-prev{
+            left: 0;
+            
+        }
+        i{
+            @include animate(color,0.35s,linear);
+        }
+        &:hover{
+            i{
+                color: darken($red, $amount: 10%);
+
+            }
+        }
+    }
+    .feedback-slider{
+        padding: 0 60px;
     }
 }

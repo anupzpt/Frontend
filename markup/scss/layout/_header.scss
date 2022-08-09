@@ -2,7 +2,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
+    // bottom: 0;
     right: 0;
     z-index: 999;
     padding: 15px 50px;
@@ -11,5 +11,14 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+}
+.nav-opener{
+    @include  size(32px,20px);
+    display:inline-block;
+    vertical-align:top;
+    position:relative;
+    span{
+        position: absolute;
     }
 }
