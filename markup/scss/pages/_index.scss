@@ -1,19 +1,28 @@
 .banner-part {
 
         .banner-slider{
-            padding: 65px 0;
+            // padding: 65px 0;
             position: relative;
+            
             display: flex;
-            // flex-wrap: wrap;
-            // align-items: center;
-            // justify-content: center;
+            height: 100vh;
+           .slick-track{
+            height: 100%;
+            display: flex !important;
+           }
+           .slick-slide{
+            height: auto;
+            position: relative;
+            @include flex(wrap,center,center);
+           }
 
-            &:before {
-                content: '';
-                height: 100vh;
-                display: block;
-            }
-        
+            // &:before {
+            //     content: '';
+            //     height: 100vh;
+            //     display: block;
+            // }
+            .bg-stretch{
+
             &:after {
                 content: '';
                 position: absolute;
@@ -23,7 +32,10 @@
                 left: 0;
                 background-color: #bf3d42;
                 mix-blend-mode: darken;
+                pointer-events: none;
             }
+        }
+
         }
     h1 {
         color: $white;
@@ -40,8 +52,10 @@
 }
 
 .about-part {
-    padding: 120px 0;
-
+    padding: 50px 0;
+    @include media('>=desktop'){
+        padding: 120px 0;
+    }
     .image-wrap {
         position: relative;
         /* width: 500px;
@@ -58,6 +72,20 @@
 
     .btn-wrap {
         margin-top: 60px;
+    }
+    .two-columns{
+        .small-col{
+            order: 0;
+            @include media('>=tablet'){
+                order: 1;
+            }
+        }
+        .large-col{
+            order: 1;
+            @include media('>=tablet'){
+                order: 0;
+            }
+        }
     }
 }
 
@@ -259,4 +287,41 @@
     .feedback-slider{
         padding: 0 60px;
     }
+
+  
 }
+.slick-dots{
+    @extend %listreset;
+    position: absolute;
+    bottom: 72px;
+    right: 0;
+    left: 0;
+    @include flex(wrap,center,center);
+
+    li{
+        padding: 0 2px 0 3px;
+
+        &.slick-active{
+         
+            button{
+                @include size(26px);
+                background-color: transparent;
+            }
+        }
+    }
+    button{
+        padding: 0;
+        display: block;
+        @include hide-text;
+        background-color: #f9f9fb;
+        @include size(18px);
+        border-radius: 50%;
+        border: 3px solid #f9f9fb;
+        @include animate(all,0.35s,ease);
+
+        &:hover{
+            @include size(26px);
+            background-color: transparent;
+        }
+    }
+ }
