@@ -18,13 +18,13 @@
 @import "vendors/bootstrap/code";
 @import "vendors/bootstrap/grid";
 // @import "vendors/bootstrap/tables";
-// @import "vendors/bootstrap/forms";
+@import "vendors/bootstrap/forms";
 @import "vendors/bootstrap/buttons";
 @import "vendors/bootstrap/transitions";
 // @import "vendors/bootstrap/dropdown";
 // @import "vendors/bootstrap/button-group";
-// @import "vendors/bootstrap/input-group";
-// @import "vendors/bootstrap/custom-forms";
+@import "vendors/bootstrap/input-group";
+@import "vendors/bootstrap/custom-forms";
 @import "vendors/bootstrap/nav";
 @import "vendors/bootstrap/navbar";
 // @import "vendors/bootstrap/card";
@@ -45,3 +45,4 @@
 // @import "vendors/bootstrap/spinners";
 @import "vendors/bootstrap/utilities";
 // @import "vendors/bootstrap/print";
+@import "vendors/icomoon";
